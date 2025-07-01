@@ -1,18 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import axios from "axios";
+import type { Detection } from "./models/detection";
 
-interface DetectionBox {
-  x1: number;
-  y1: number;
-  x2: number;
-  y2: number;
-}
-
-interface Detection {
-  class: string;
-  confidence: number;
-  box: DetectionBox;
-}
 
 function App() {
   const videoRef = useRef<HTMLVideoElement>(null);
